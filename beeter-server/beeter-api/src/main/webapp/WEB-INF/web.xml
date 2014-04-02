@@ -111,4 +111,22 @@
 		<http-method>GET</http-method>
 		</web-resource-collection>
 </security-constraint>
+
+<security-constraint>
+	<web-resource-collection>
+		<web-resource-name>Username</web-resource-name>
+		<url-pattern>/username/*</url-pattern>
+		<http-method>PUT</http-method>
+	</web-resource-collection>
+	<auth-constraint>
+		<role-name>registered</role-name>
+	</auth-constraint>
+</security-constraint>
+<security-constraint>
+	<web-resource-collection>
+		<web-resource-name>Username</web-resource-name>
+		<url-pattern>/username/*</url-pattern>
+		<http-method>GET</http-method>
+		</web-resource-collection>
+</security-constraint>
 </web-app>
