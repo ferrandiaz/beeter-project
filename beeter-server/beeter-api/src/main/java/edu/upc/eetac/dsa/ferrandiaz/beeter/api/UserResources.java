@@ -123,7 +123,7 @@ public class UserResources {
 	}
 
 	@PUT
-	@Consumes(MediaType.BEETER_API_STING)
+	@Consumes(MediaType.BEETER_API_USER)
 	@Produces(MediaType.BEETER_API_USER)
 	public user updateUser(@PathParam("username") String username, user user) {
 		validateUsername(username);

@@ -50,7 +50,7 @@ public class StingResource {
 			throw new ServerErrorException("Could not connect to the database",
 					Response.Status.SERVICE_UNAVAILABLE);
 		}
-	 
+	
 		PreparedStatement stmt = null;
 		try {
 			boolean updateFromLast = after > 0;
@@ -61,8 +61,8 @@ public class StingResource {
 				if (before > 0)
 					stmt.setTimestamp(1, new Timestamp(before));
 				else
-					stmt.setTimestamp(1, null);
-				length = (length <= 0) ? 5 : length;
+				stmt.setTimestamp(1, null);
+				length = (length <= 0) ? 20 : length;
 				stmt.setInt(2, length);
 			}
 			ResultSet rs = stmt.executeQuery();
@@ -198,7 +198,7 @@ public class StingResource {
 			throw new ServerErrorException("Could not connect to the database",
 					Response.Status.SERVICE_UNAVAILABLE);
 		}
-
+		
 		PreparedStatement stmt = null;
 		try {
 			stmt = conn
@@ -215,7 +215,7 @@ public class StingResource {
 				stmt.setString(2,"%%");
 			}
 			if(length == 0){
-				length = 5;
+				length = 20;
 			}
 			stmt.setInt(3, length);
 

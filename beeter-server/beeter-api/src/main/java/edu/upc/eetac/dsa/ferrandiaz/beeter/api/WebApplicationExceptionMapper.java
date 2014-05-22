@@ -9,7 +9,7 @@ import edu.upc.eetac.dsa.ferrandiaz.beeter.api.model.BeeterError;
 
 @Provider
 public class WebApplicationExceptionMapper implements
-		ExceptionMapper<WebApplicationException> {
+		ExceptionMapper<WebApplicationException>  {
 	@Override
 	public Response toResponse(WebApplicationException exception) {
 		BeeterError error = new BeeterError(
